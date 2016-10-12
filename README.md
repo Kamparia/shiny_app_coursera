@@ -1,4 +1,4 @@
-# shiny_app_coursera
+# Shiny Simple Calculator Application
 
 This is my first shiny application developed in fulfillment of the Coursera course "Developing Data Products in R"
 
