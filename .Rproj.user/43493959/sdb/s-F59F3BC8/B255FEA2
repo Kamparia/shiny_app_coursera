@@ -1,14 +1,14 @@
 {
     "collab_server" : "",
-    "contents" : "#\n# This is the user-interface definition of a Shiny web application. You can\n# run the application by clicking 'Run App' above.\n#\n# Find out more about building applications with Shiny here:\n# \n#    http://shiny.rstudio.com/\n#\n\nlibrary(shiny)\n\n# Define UI for application that draws a histogram\nshinyUI(fluidPage(\n  \n  # Application title\n  titlePanel(\"Simple Calculator...\"),\n  \n  # Sidebar with input widgets for mathematical calculations\n  sidebarLayout(\n    sidebarPanel(\n      (\"\"),\n      # selectInput for the variable operator\n      selectInput(\n        \"operator\", \"Select mathematical operation:\",\n        c(\n          \"Division (/)\" = \"division\",\n          \"Multiplication (*)\" = \"multiplication\",\n          \"Subtraction (-)\" = \"subtraction\",\n          \"Addition (+)\" = \"addition\"\n        )\n      ),\n      \n      # numerical input of the first value\n      numericInput(\"first\", \"Enter your first value:\", \"5\"),\n      \n      # numerical input of the second value\n      numericInput(\"second\", \"Enter your second value:\", \"2\")\n    ),\n    \n    # Show the output of the computation generated from the server side\n    mainPanel(\n      (\"\"),\n      # output the result from the server\n      textOutput(\"result\")\n    )\n  )\n))\n",
+    "contents" : "#\n# This is the user-interface definition of a Shiny web application. You can\n# run the application by clicking 'Run App' above.\n#\n# Find out more about building applications with Shiny here:\n# \n#    http://shiny.rstudio.com/\n#\n\nlibrary(shiny)\nlibrary(rsconnect)\n\n# Define UI for application that draws a histogram\nshinyUI(fluidPage(\n  \n  # Application title\n  titlePanel(\"Simple Calculator...\"),\n  \n  # Sidebar with input widgets for mathematical calculations\n  sidebarLayout(\n    sidebarPanel(\n      (\"\"),\n      # selectInput for the variable operator\n      selectInput(\n        \"operator\", \"Select mathematical operation:\",\n        c(\n          \"Division (/)\" = \"division\",\n          \"Multiplication (*)\" = \"multiplication\",\n          \"Subtraction (-)\" = \"subtraction\",\n          \"Addition (+)\" = \"addition\"\n        )\n      ),\n      \n      # numerical input of the first value\n      numericInput(\"first\", \"Enter your first value:\", \"5\"),\n      \n      # numerical input of the second value\n      numericInput(\"second\", \"Enter your second value:\", \"2\")\n    ),\n    \n    # Show the output of the computation generated from the server side\n    mainPanel(\n      (\"\"),\n      # output the result from the server\n      textOutput(\"result\")\n    )\n  )\n))\n",
     "created" : 1476229021753.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "2134521221",
+    "hash" : "811500654",
     "id" : "B255FEA2",
-    "lastKnownWriteTime" : 1476228522,
-    "last_content_update" : 1476228522,
+    "lastKnownWriteTime" : 1476230568,
+    "last_content_update" : 1476230568027,
     "path" : "~/R/projects/Coursera/shiny_app_coursera/ui.R",
     "project_path" : "ui.R",
     "properties" : {

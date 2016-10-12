@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "#\n# This is the server logic of a Shiny web application. You can run the \n# application by clicking 'Run App' above.\n#\n# Find out more about building applications with Shiny here:\n# \n#    http://shiny.rstudio.com/\n#\n\nlibrary(shiny)\nlibrary(rsconnect)\n\n# Define server logic required to make mathematical computations\nshinyServer(function(input, output) {\n  # reactive function of the variale operator\n  operator <- reactive({\n    input$operator\n  })\n\n  # reactive function of the variale first\n  first <- reactive({\n    as.integer(input$first)\n  })\n\n  # reactive function of the variale second\n  second <- reactive({\n    as.integer(input$second)\n  })  \n  \n  # outputs the result to the UI\n  output$result <- renderText(\n    # conditional statement based on selected operation\n    if(operator() == \"division\"){\n      value <- first() / second()\n      paste(\"Answer equals \", value)\n    }\n    \n    else if(operator() == \"multiplication\"){\n      value <- first() * second()\n      paste(\"Answer equals \", value)\n    }\n    \n    else if(operator() == \"subtraction\"){\n      value <- first() - second()\n      paste(\"Answer equals \", value)\n    }\n    \n    else if(operator() == \"addition\"){\n      value <- first() + second()\n      paste(\"Answer equals \", value)      \n    }\n    \n    else{\n      paste({\"Invalid operations\"})\n    }\n  )\n  \n  \n})",
+    "created" : 1476230577251.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2661432927",
+    "id" : "6E511E56",
+    "lastKnownWriteTime" : 1476230581,
+    "last_content_update" : 1476230581598,
+    "path" : "~/R/projects/Coursera/shiny_app_coursera/server.R",
+    "project_path" : "server.R",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

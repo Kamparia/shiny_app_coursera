@@ -8,6 +8,7 @@
 #
 
 library(shiny)
+library(rsconnect)
 
 # Define server logic required to make mathematical computations
 shinyServer(function(input, output) {
